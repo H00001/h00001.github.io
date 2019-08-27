@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>epoll性能</title>
+</head>
+
+<body>
+epoll高效，是因为内部用了一个红黑树记录添加的socket，用了一个双向链表接收内核触发的事件。是系统级别的支持的：
+当某一进程调用epoll_create方法时，Linux内核会创建一个eventpoll结构体，这个结构体中有两个成员与epoll的使用方式密切相关。
+eventpoll结构体如下所示：
+<pre>
+struct eventpoll{
+....
+/*红黑树的根节点，这颗树中存储着所有添加到epoll中的需要监控的事件*/
+struct rb_root  rbr;
+/*双链表中则存放着将要通过epoll_wait返回给用户的满足条件的事件*/
+struct list_head rdlist;
+....
+};
+</pre>
+</body>
+</html>
