@@ -103,18 +103,17 @@ unsigned long used;
 
 }dictht
 　　哈希表是由数组 table 组成，table 中每个元素都是指向 dict.h/dictEntry 结构，dictEntry 结构定义如下：
-<code>
+<pre>
     typedef struct dictEntry{
-    //键
-    void *key;
-    //值
-    union{
-    void *val;
-    uint64_tu64;
-    int64_ts64;
-    }v;
-</code>
-
+        //键
+        void *key;
+        //值
+        union{
+            void *val;
+            uint64_tu64;
+            int64_ts64;
+        }v;
+    </pre>
 //指向下一个哈希表节点，形成链表
 struct dictEntry *next;
 }dictEntry
