@@ -49,8 +49,7 @@ key 的字符串长度。
 <pre>
 所以Redis自己构建了链表的实现
     　　</pre>
-<progress>
-    　　链表定义：
+　　链表定义：
     typedef struct listNode{
     //前置节点
     struct listNode *prev;
@@ -60,7 +59,6 @@ key 的字符串长度。
     void *value;
     }listNode
     　　通过多个 listNode 结构就可以组成链表，这是一个双端链表，Redis还提供了操作链表的数据结构：
-</progress>
 <code>
     typedef struct list{
     //表头节点
