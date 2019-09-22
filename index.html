@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
 
     <title>frank</title>
     <style>
@@ -40,12 +40,27 @@
         }
 
         a {
-            font-size: 16px;
+            font-size: 18px;
         }
 
+        .block-title {
+            font-size: 25px;
+
+        }
+
+        p {
+            font-size: 30px;
+            line-height: 30px;
+        }
 
         .pages_block {
+            background-color: #f1f1f1;
             border: 1px solid greenyellow;
+        }
+
+        a {
+            line-height: 25px;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -72,12 +87,12 @@
 <div class="docs">
     <p>pages</p>
     <div class="pages_block">
-        go <br>
+        <span class="block-title"> go</span> <br>
         <a href="/docs/0000001.html">go gc</a><br>
 
     </div>
     <div class="pages_block">
-        java <br>
+        <span class="block-title">  java</span> <br>
         <a href="/docs/0000002.html">java fork join pool</a><br>
         <a href="/docs/0000004.html">java 12 new character</a><br/>
         <a href="https://www.toutiao.com/i6736733572826137096/">java ForkJoinPool底层原理</a><br>
@@ -85,24 +100,24 @@
         <a href="https://www.toutiao.com/i6737419514968801795/">Java NIO最佳实践</a><br>
     </div>
     <div class="pages_block">
-        os <br>
+        <span class="block-title">  os</span> <br>
         <a href="https://www.toutiao.com/i6736468793238749699/">cpu cas机制原理</a><br/>
         <a href="/docs/0000003.html">epoll 性能为啥这么高</a><br/>
     </div>
 
     <div class="pages_block">
-        redis <br>
+        <span class="block-title">  redis </span><br>
         <a href="/docs/0000006.html">redis data types</a>
     </div>
     <div class="pages_block">
-        arithmetic <br>
+        <span class="block-title">  arithmetic</span> <br>
         <a href="/raft/thesecretlivesofdata.com/index.html">raft algorithm</a><br/>
         <a href="https://www.toutiao.com/i6736462426071368195/">分布式一致性</a><br/>
         <a href="/docs/0000007.html">动态规划，零钱问题</a><br/>
 
     </div>
     <div class="pages_block">
-        设计模式 <br>
+        <span class="block-title">   设计模式 </span><br>
         <a href="https://www.toutiao.com/i6738172783634678283/">vistor mode</a><br/>
     </div>
 </div>
