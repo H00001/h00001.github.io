@@ -6,6 +6,18 @@
 
     <title>frank</title>
     <style>
+        .open-project {
+            display: inline-block;
+            width: 80%;
+            color: #586069 !important;
+        }
+
+        .open-project-name {
+            color: #0366d6;
+            display: inline-block;
+            width: 10%;
+        }
+
         body {
             margin-left: auto;
             background-color: #f1f1f1;
@@ -55,7 +67,10 @@
         }
 
         .pages_block {
-            background-color: #f1f1f1;
+            background-color: #f4f3f4;
+            border: 1px solid #d1d5da;
+            border-radius: 5px;
+            padding: 15px;
         }
 
         a {
@@ -74,14 +89,15 @@
 <div class="docs">
     <p>projects</p>
     <div class="pages_block">
-        GunNetty:A network server that supports high availability <a href="/Gun-Netty-Doc">DOCS</a> <a
-            href="https://github.com/H00001/GunNetty-Core">GITHUB</a>
-        <br>
-        GunRIC : A framework to support high concurrency remote interface calls <a href="/GunRIC-Doc">DOCS</a> <a
-            href="https://github.com/H00001/GunRIC">GITHUB</a>
-        <br>
-        GunHttpJ: A high-performance web server <a href="">DOCS</a> <a
+        <span class="open-project"> <span class="open-project-name">GunNetty </span>: A network server that supports high availability</span>
+        <a href="/Gun-Netty-Doc">DOCS</a> <a href="https://github.com/H00001/GunNetty-Core">GITHUB</a><br>
+        <span class="open-project"> <span class="open-project-name">GunRIC</span>: A framework to support high concurrency remote interface calls</span>
+        <a href="/GunRIC-Doc">DOCS</a> <a href="https://github.com/H00001/GunRIC">GITHUB</a><br>
+        <span class="open-project"> <span
+                class="open-project-name"> GunHttpJ</span>: A high-performance web server</span> <a href="">DOCS</a> <a
             href="https://github.com/H00001/GunHttdJ">GITHUB</a>
+        <span class="open-project"> <span class="open-project-name">GunKeeper</span> </span> <a href="">DOCS</a> <a
+            href="https://github.com/H00001/GunKeeper">GITHUB</a>
     </div>
 </div>
 <div class="docs">
