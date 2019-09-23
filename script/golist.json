@@ -1,12 +1,17 @@
 [
   {
     "name": "golang memory manage",
-    "describe": "A NIO client server framework which enables quick and easy of network server.",
+    "describe": "",
     "url": "https://studygolang.com/articles/21025?fr=sidebar"
   },
   {
     "name": "golang gc",
-    "describe": "A NIO client server framework which enables quick and easy of network server.",
+    "describe": "",
     "url": "docs/0000001.html"
+  },
+  {
+    "name": "golang slice",
+    "describe": "",
+    "url": "https://www.runoob.com/go/go-slice.html"
   }
 ]
