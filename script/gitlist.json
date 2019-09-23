@@ -15,7 +15,7 @@
     "name": "GunKeeper",
     "describe": "A service for naming, providing distributed synchronization that supports high availability",
     "doc": "/GunKeeper-Doc",
-    "github": "https://github.com/H00001/GunNetty-Core"
+    "github": "https://github.com/H00001/GunKeeper"
   },
   {
     "name": "GunHttpJ",
