@@ -9,17 +9,16 @@
     <script>
         getListItemFunc(function (v) {
                 let input = document.getElementById("projects");
-                input.innerHTML += '<span class="open-project"><svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>' +
-                    '<span class="open-project-name">' + v.name + '</span><span class="proj-describe">' + v.describe + '</span></span><a href="' + v.doc + '">DOCS</a> <a href="' + v.github + '">GITHUB</a><br>' +
+                input.innerHTML += '<span class="open-project"><svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 12 16" version="1.1" width="20" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>' +
+                    '<span class="open-project-name"> ' + v.name + '</span><span class="proj-describe">' + v.describe + '</span></span><a href="' + v.doc + '">DOCS</a> <a href="' + v.github + '">GITHUB</a><br>' +
                     "<br>";
-
             }, "script/gitlist.json"
         );
 
         function extracted_0(id, url) {
             getListItemFunc(function (v) {
                     let input = document.getElementById(id);
-                    input.innerHTML += '<a href="' + v.url + '">' + v.name + '</a><br>\n';
+                    input.innerHTML += '<a class="pages-name-0" href="' + v.url + '">' + v.name + '</a><br>\n';
                 }, url
             );
         }
@@ -35,6 +34,11 @@
             display: inline-block;
             width: 85%;
             color: #586069 !important;
+        }
+
+        .pages-name-0 {
+            line-height: 30px;
+            color: #0366d6;
         }
 
         .open-project-name {
@@ -130,24 +134,23 @@
 <div class="docs">
     <p>Pages</p>
     <div class="pages_block" id="go-page">
-        <span class="block-title">golang</span> <br>
+        <span class="block-title">Golang</span> <br>
     </div>
     <div class="pages_block" id="java-page">
-        <span class="block-title">java</span> <br>
-        <a href="https://www.toutiao.com/i6737419514968801795/">Java NIO最佳实践</a><br>
+        <span class="block-title">Java</span> <br>
     </div>
     <div class="pages_block">
-        <span class="block-title">os</span> <br>
+        <span class="block-title">OS</span> <br>
         <a href="https://www.toutiao.com/i6736468793238749699/">cpu cas机制原理</a><br/>
         <a href="/docs/0000003.html">epoll 性能为啥这么高</a><br/>
     </div>
 
     <div class="pages_block">
-        <span class="block-title">  redis </span><br>
+        <span class="block-title">Redis</span><br>
         <a href="/docs/0000006.html">redis data types</a>
     </div>
     <div class="pages_block">
-        <span class="block-title">  arithmetic</span> <br>
+        <span class="block-title">Arithmetic</span> <br>
         <a href="/raft/thesecretlivesofdata.com/index.html">raft algorithm</a><br/>
         <a href="https://www.toutiao.com/i6736462426071368195/">分布式一致性</a><br/>
         <a href="/docs/0000007.html">动态规划，零钱问题</a><br/>
