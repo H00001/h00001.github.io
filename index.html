@@ -16,11 +16,18 @@
             }, "script/gitlist.json"
         );
 
-        getListItemFunc(function (v) {
-                let input = document.getElementById("go-page");
-                input.innerHTML += '<a href="' + v.url + '">' + v.name + '</a><br>\n';
-            }, "script/golist.json"
-        );
+        function extracted_0(id, url) {
+            getListItemFunc(function (v) {
+                    let input = document.getElementById(id);
+                    input.innerHTML += '<a href="' + v.url + '">' + v.name + '</a><br>\n';
+                }, url
+            );
+        }
+
+        extracted_0("go-page", "script/golist.json");
+        extracted_0("java-page", "script/javalist.json");
+
+
     </script>
     <title>frank</title>
     <style>
@@ -37,10 +44,11 @@
             width: 15%;
         }
 
-        .proj-describe{
+        .proj-describe {
             display: inline-block;
             width: 80%;
         }
+
         body {
             margin-left: auto;
             background-color: #f1f1f1;
@@ -124,12 +132,8 @@
     <div class="pages_block" id="go-page">
         <span class="block-title">golang</span> <br>
     </div>
-    <div class="pages_block">
+    <div class="pages_block" id="java-page">
         <span class="block-title">java</span> <br>
-        <a href="/docs/0000002.html">java fork join pool</a><br>
-        <a href="/docs/0000004.html">java 12 new character</a><br/>
-        <a href="https://www.toutiao.com/i6736733572826137096/">java ForkJoinPool底层原理</a><br>
-        <a href="https://www.toutiao.com/i6688630628671291911/">Java远程接口调用框架GunRIC部署及使用</a><br>
         <a href="https://www.toutiao.com/i6737419514968801795/">Java NIO最佳实践</a><br>
     </div>
     <div class="pages_block">
@@ -147,7 +151,6 @@
         <a href="/raft/thesecretlivesofdata.com/index.html">raft algorithm</a><br/>
         <a href="https://www.toutiao.com/i6736462426071368195/">分布式一致性</a><br/>
         <a href="/docs/0000007.html">动态规划，零钱问题</a><br/>
-
     </div>
     <div class="pages_block">
         <span class="block-title">   设计模式 </span><br>
