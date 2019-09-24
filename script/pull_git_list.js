@@ -1,6 +1,5 @@
 function extracted(func, url) {
     var request = new XMLHttpRequest();
-    console.log(url);
     request.open("GET", url, true);
     request.send();
     request.onreadystatechange = function () {

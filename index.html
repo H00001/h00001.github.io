@@ -4,6 +4,9 @@
     <meta charset="UTF-8"/>
     <script src="script/pull_git_list.js">
     </script>
+    <script src="script/nooffer.js">
+
+    </script>
     <script>
         getListItemFunc(function (v) {
                 let input = document.getElementById("projects");
@@ -15,14 +18,21 @@
 
         function extracted_0(id, url) {
             getListItemFunc(function (v) {
-                    let input = document.getElementById(id);
-                    input.innerHTML += '<a class="pages-name-0" href="' + v.url + '">' + v.name + '</a><br>\n';
+                    $("#" + id).appendHtml('<a class="pages-name-0" href="' + v.url + '">' + v.name + '</a><br>');
                 }, url
             );
         }
 
+        getList(function (u) {
+            k = (new Date()).valueOf() % u.length;
+            document.getElementById("main-head-title").innerHTML = u[k].name;
+        }, "script/main_title_list.json");
         extracted_0("go-page", "script/golist.json");
         extracted_0("java-page", "script/javalist.json");
+        extracted_0("os-page", "script/oslist.json");
+        extracted_0("redis-page", "script/redis.json");
+
+
     </script>
     <title>frank</title>
     <style>
@@ -61,7 +71,7 @@
             line-height: 120px;
             color: white;
             background: #ff0000;
-            font-family: "Microsoft YaHei", serif;
+            font-family: "Microsoft YaHei", "Apple Braille", serif;
             font-size: 40px;
             text-align: center;
         }
@@ -120,7 +130,7 @@
     </style>
 </head>
 <body>
-<div class="main-head-title">
+<div class="main-head-title" id="main-head-title">
     不忘初心跟党走，撸起袖子加油干
 </div>
 <h1 class="main-title">
@@ -139,15 +149,12 @@
     <div class="pages_block" id="java-page">
         <span class="block-title">Java</span> <br>
     </div>
-    <div class="pages_block">
+    <div class="pages_block" id="os-page">
         <span class="block-title">OS</span> <br>
-        <a href="https://www.toutiao.com/i6736468793238749699/">cpu cas机制原理</a><br/>
-        <a href="/docs/0000003.html">epoll 性能为啥这么高</a><br/>
     </div>
 
-    <div class="pages_block">
+    <div class="pages_block" id="redis-page">
         <span class="block-title">Redis</span><br>
-        <a href="/docs/0000006.html">redis data types</a>
     </div>
     <div class="pages_block">
         <span class="block-title">Arithmetic</span> <br>
