@@ -2,31 +2,43 @@
   {
     "id": "go-page",
     "describe": "",
-    "name": "Golang"
+    "name": "Golang",
+    "ajax": "go-page-list"
   },
   {
     "id": "java-page",
     "describe": "",
-    "name": "Java"
+    "name": "Java",
+    "ajax": "java-page-list"
   },
   {
     "id": "os-page",
     "describe": "",
-    "name": "OS"
+    "name": "OS",
+    "ajax": "os-page-list"
   },
   {
     "id": "redis-page",
     "describe": "",
-    "name": "Redis"
+    "name": "Redis",
+    "ajax": "redis-page-list"
   },
   {
     "id": "arithmetic-page",
     "describe": "",
-    "name": "Arithmetic"
+    "name": "Arithmetic",
+    "ajax": "arithmetic-page-list"
   },
   {
     "id": "best-practice-page",
     "describe": "",
-    "name": "Best Practice"
+    "name": "Best Practice",
+    "ajax": "best-practice-page-list"
+  },
+  {
+    "id": "network-page",
+    "describe": "",
+    "name": "NetWork",
+    "ajax": "network-page-list"
   }
 ]
