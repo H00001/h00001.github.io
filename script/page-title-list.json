@@ -1,0 +1,32 @@
+[
+  {
+    "id": "go-page",
+    "describe": "",
+    "name": "Golang"
+  },
+  {
+    "id": "java-page",
+    "describe": "",
+    "name": "Java"
+  },
+  {
+    "id": "os-page",
+    "describe": "",
+    "name": "OS"
+  },
+  {
+    "id": "redis-page",
+    "describe": "",
+    "name": "Redis"
+  },
+  {
+    "id": "arithmetic-page",
+    "describe": "",
+    "name": "Arithmetic"
+  },
+  {
+    "id": "best-practice-page",
+    "describe": "",
+    "name": "Best Practice"
+  }
+]
