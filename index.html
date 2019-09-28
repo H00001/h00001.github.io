@@ -5,20 +5,19 @@
     <script src="script/pull_git_list.js">
     </script>
     <script src="script/nooffer.js">
-
     </script>
+    <script src="script/common.js"></script>
     <script>
         getListItemFunc(function (v) {
-                let input = document.getElementById("projects");
-                input.innerHTML += '<span class="open-project"><svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 12 16" version="1.1" width="20" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>' +
+                $$("#projects").appendHtml('<span class="open-project"><svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 12 16" version="1.1" width="20" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>' +
                     '<span class="open-project-name"> ' + v.name + '</span><span class="proj-describe">' + v.describe + '</span></span><a href="' + v.doc + '">DOCS</a> <a href="' + v.github + '">GITHUB</a><br>' +
-                    "<br>";
+                    "<br>")
             }, "script/gitlist.json"
         );
 
         function extracted_0(id, url) {
             getListItemFunc(function (v) {
-                    $("#" + id).appendHtml('<a class="pages-name-0" href="' + v.url + '">' + v.name + '</a><br>');
+                    $$("#" + id).appendHtml('<a class="pages-name-0" href="' + v.url + '">' + v.name + '</a><br>');
                 }, url
             );
         }
@@ -29,130 +28,21 @@
         }, "script/main_title_list.json");
 
         getListItemFunc(function (v) {
-                $("#docs").appendHtml('<div class="pages_block" id="' + v.id + '"> <span class="block-title">' + v.name + '</span> <br> </div>');
-                extracted_0(v.id, "script/" + v.ajax+".json");
+                $$("#docs").appendHtml('<div class="pages_block" id="' + v.id + '"> <span class="block-title">' + v.name + '</span> <br> </div>');
+                extracted_0(v.id, "script/" + v.ajax + ".json");
             }, "script/page-title-list.json"
+        );
+
+        getListItemFunc(function (v) {
+                $$("#menu").appendHtml('<button class="menu-button" onclick="' + v.onclick + '">' + v.name + '</button>')
+            }, "data/index-main-menu.json"
         );
 
     </script>
     <title>frank</title>
-    <style>
-        .open-project {
-            display: inline-block;
-            width: 85%;
-            color: #586069 !important;
-        }
+    <!--  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>-->
+    <link href="css/index-main.css" rel="stylesheet" type="text/css">
 
-        .pages-name-0 {
-            line-height: 30px;
-            color: #0366d6;
-        }
-
-        .open-project-name {
-            text-decoration: none;
-            color: #0366d6;
-            display: inline-block;
-            width: 15%;
-        }
-
-        .proj-describe {
-            display: inline-block;
-            width: 80%;
-        }
-
-        body {
-            margin-left: auto;
-            background-color: #f1f1f1;
-        }
-
-        .main-head-title {
-            margin: auto;
-            width: 70%;
-            height: 120px;
-            line-height: 120px;
-            color: white;
-            background: #ff0000;
-            font-family: "Microsoft YaHei", "Apple Braille", serif;
-            font-size: 40px;
-            text-align: center;
-        }
-
-        .docs {
-            font-family: helvetica, Arial, Hiragino Sans GB, Microsoft YaHei, simsun, serif;
-            font-size: 18px;
-            width: 70%;
-            margin: auto;
-        }
-
-        .main-buttom, .police {
-            margin: 50px auto auto;
-            width: 70%;
-        }
-
-
-        .main-title {
-            text-align: center;
-        }
-
-        a {
-            font-size: 18px;
-        }
-
-        .block-title {
-            font-size: 25px;
-
-        }
-
-        p {
-            font-size: 30px;
-            line-height: 30px;
-        }
-
-        .star {
-            display: inline-block;
-        }
-
-        .pages_block {
-            background-color: #f4f3f4;
-            border: 1px solid #d1d5da;
-            border-radius: 5px;
-            padding: 15px;
-            margin-top: 10px;
-        }
-
-        a {
-            line-height: 25px;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .menu {
-            height: 20px;
-            text-align: center;
-        }
-
-        .menu-button {
-            width: 120px;
-            font-size: 15px;
-            height: 30px;
-            background: dodgerblue;
-            color: #FFFFFF;
-            border: 0;
-            margin-left: 20px;
-        }
-
-        .menu-button:hover {
-            color: dodgerblue;
-            background: #fcfcfc;
-        }
-
-        h1 {
-            line-height: 70px;
-        }
-    </style>
 </head>
 <body>
 <div class="main-head-title" id="main-head-title">
@@ -162,10 +52,6 @@
     Frank PERSONAL MAIN PAGE
 </h1>
 <div class="menu" id="menu">
-    <button class="menu-button">GITHUB</button>
-    <button class="menu-button">今日头条</button>
-    <button class="menu-button">CSDN</button>
-    <button class="menu-button">FaceBook</button>
 </div>
 <div class="docs">
     <p>Projects</p>

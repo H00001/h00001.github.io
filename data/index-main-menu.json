@@ -1,0 +1,18 @@
+[
+  {
+    "name": "GITHUB",
+    "onclick": "turnTo('https://github.com/h00001')"
+  },
+  {
+    "name": "今日头条",
+    "onclick": "turnTo('https://www.toutiao.com/c/user/17000560098/#mid=1556302742083585')"
+  },
+  {
+    "name": "??",
+    "onclick": "turnTo()"
+  },
+  {
+    "name": "null",
+    "onclick": "turnTo()"
+  }
+]
