@@ -8,11 +8,11 @@
     "onclick": "turnTo('https://www.toutiao.com/c/user/17000560098/#mid=1556302742083585')"
   },
   {
-    "name": "??",
+    "name": "CSDN",
     "onclick": "turnTo()"
   },
   {
-    "name": "null",
+    "name": "一些资料",
     "onclick": "turnTo()"
   }
 ]
