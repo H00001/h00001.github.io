@@ -24,11 +24,12 @@
 
         getList(function (u) {
             k = (new Date()).valueOf() % u.length;
-            document.getElementById("main-head-title").innerHTML = u[k].name;
+            $$("#main-head-title").innerHTML = u[k].name;
         }, "script/main_title_list.json");
 
         getListItemFunc(function (v) {
                 $$("#docs").appendHtml('<div class="pages_block" id="' + v.id + '"> <span class="block-title">' + v.name + '</span> <br> </div>');
+                $$("#flow-left-menu").appendHtml("<a>" + v.name + "<br/></a>");
                 extracted_0(v.id, "script/" + v.ajax + ".json");
             }, "script/page-title-list.json"
         );
@@ -71,9 +72,6 @@
     根据非经营性网络管理办法相关规定，该网站备案号为<a href="">辽ICP备17016903</a>&nbsp;
 </div>
 <div class="flow-left-menu" id="flow-left-menu">
-    Golang<br/>
-    Java<br/>
-    OS<br/>
 </div>
 
 </body>

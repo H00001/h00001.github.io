@@ -24,6 +24,7 @@
 body {
     margin-left: auto;
     background-color: #f1f1f1;
+    font-family: helvetica, Arial, Hiragino Sans GB, Microsoft YaHei, simsun, serif;
 }
 
 .main-head-title {
@@ -116,7 +117,6 @@ h1 {
 
 #flow-left-menu {
     width: 150px;
-    height: 200px;
     background: dodgerblue;
     border-radius: 5px;
     position: fixed;
@@ -124,5 +124,7 @@ h1 {
     color: #FFFFFF;
     top: 20%;
     text-align: center;
-    font-size: 25px;
+    padding: 5px;
+    font-size: 20px;
+    line-height: 40px;
 }
