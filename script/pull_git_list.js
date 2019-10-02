@@ -16,7 +16,7 @@ function getList(func, url) {
 function getListItemFunc(func, url) {
     getList(function (k) {
         for (let i = 0; i < k.length; i++) {
-            func(k[i])
+            func(k[i],i)
         }
     }, url)
 }

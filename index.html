@@ -27,9 +27,9 @@
             $$("#main-head-title").innerHTML = u[k].name;
         }, "script/main_title_list.json");
 
-        getListItemFunc(function (v) {
+        getListItemFunc(function (v, i) {
                 $$("#docs").appendHtml('<div class="pages_block" id="' + v.id + '"> <span class="block-title">' + v.name + '</span> <br> </div>');
-                $$("#flow-left-menu").appendHtml("<a>" + v.name + "<br/></a>");
+                $$("#flow-left-menu").appendHtml("<a class='left-menu-a' href='#" + v.id + "'>" + v.name + "<br/></a>");
                 extracted_0(v.id, "script/" + v.ajax + ".json");
             }, "script/page-title-list.json"
         );
