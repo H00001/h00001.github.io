@@ -42,9 +42,9 @@
     "ajax": "network-page-list"
   },
   {
-    "id": "Docker-page",
+    "id": "docker-page",
     "describe": "",
-    "name": "docker",
+    "name": "Docker",
     "ajax": "docker-page-list"
   }
 ]
