@@ -46,5 +46,11 @@
     "describe": "",
     "name": "Docker",
     "ajax": "docker-page-list"
+  },
+  {
+    "id": "open-file",
+    "describe": "",
+    "name": "例会可公开文档",
+    "ajax": "open-file-page-list"
   }
 ]
