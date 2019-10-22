@@ -48,6 +48,12 @@
     "ajax": "docker-page-list"
   },
   {
+    "id": "kafka",
+    "describe": "",
+    "name": "kafka",
+    "ajax": "kafka-page-list"
+  },
+  {
     "id": "open-file",
     "describe": "",
     "name": "例会可公开文档",
