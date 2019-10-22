@@ -52,5 +52,17 @@
     "describe": "",
     "name": "例会可公开文档",
     "ajax": "open-file-page-list"
+  },
+  {
+    "id": "big-data",
+    "describe": "",
+    "name": "大数据",
+    "ajax": "big-data-page-list"
+  },
+  {
+    "id": "big-data",
+    "describe": "",
+    "name": "大数据",
+    "ajax": "big-data-page-list"
   }
 ]
