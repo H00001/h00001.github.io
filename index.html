@@ -19,7 +19,7 @@
 
         function extracted_0(id, url) {
             getListItemFunc(function (v) {
-                    $$("#" + id).appendHtml('<a class="pages-name-0" href="' + v.url + '">' + v.name + '</a><br>');
+                    $$("#" + id).appendHtml('<a class="pages-name-0" href="' + v.url + '">' + v.name + '</a><span class="pages-name-time">' + (v.time === undefined ? "2019-01-01" : v.time) + '</span> <br>');
                 }, url
             );
         }
