@@ -58,11 +58,5 @@
     "describe": "",
     "name": "大数据",
     "ajax": "big-data-page-list"
-  },
-  {
-    "id": "big-data",
-    "describe": "",
-    "name": "大数据",
-    "ajax": "big-data-page-list"
   }
 ]
