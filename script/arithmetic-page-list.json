@@ -12,7 +12,7 @@
   {
     "name": "raft algorithm 中文论文",
     "describe": "",
-    "url": "docs/0000008.md"
+    "url": "docs/raft-zh.pdf"
   },
   {
     "name": "分布式一致性",
