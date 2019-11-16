@@ -64,5 +64,11 @@
     "describe": "",
     "name": "大数据",
     "ajax": "big-data-page-list"
+  },
+  {
+    "id": "mysql",
+    "describe": "",
+    "name": "mysql",
+    "ajax": "mysql-page-list"
   }
 ]
