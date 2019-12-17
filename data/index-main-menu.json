@@ -9,7 +9,11 @@
   },
   {
     "name": "CSDN",
+<<<<<<< HEAD
     "onclick": "turnTo('./library.html')"
+=======
+    "onclick": "turnTo()"
+>>>>>>> f3bb56e718745ecb4ac9b1c450f2435884203385
   },
   {
     "name": "一些资料",

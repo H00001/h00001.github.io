@@ -12,7 +12,11 @@
     extracted(function (data) {
         dt = data.split("\n");
         for (let i = 0; i < dt.length; i++) {
+<<<<<<< HEAD
             $$("#main-in").appendHtml("<a href='" + dt[i] + "'>" + dt[i] + "</a><br>")
+=======
+            $$("#main-in").appendHtml(dt[i] + "<br>")
+>>>>>>> f3bb56e718745ecb4ac9b1c450f2435884203385
         }
     }, "./data/library", false)
 </script>
