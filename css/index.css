@@ -1,0 +1,116 @@
+
+.open-project {
+    display: inline-block;
+    width: 85%;
+    color: #586069 !important;
+}
+
+.pages-name-0 {
+    line-height: 30px;
+    color: #0366d6;
+}
+
+.open-project-name {
+    text-decoration: none;
+    color: #0366d6;
+    display: inline-block;
+    width: 15%;
+}
+
+.proj-describe {
+    display: inline-block;
+    width: 80%;
+}
+
+body {
+    margin-left: auto;
+    background-color: #f1f1f1;
+}
+
+.main-head-title {
+    margin: auto;
+    width: 70%;
+    height: 120px;
+    line-height: 120px;
+    color: white;
+    background: #ff0000;
+    font-family: "Microsoft YaHei", "Apple Braille", serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+.docs {
+    font-family: helvetica, Arial, Hiragino Sans GB, Microsoft YaHei, simsun, serif;
+    font-size: 18px;
+    width: 70%;
+    margin: auto;
+}
+
+.main-buttom, .police {
+    margin: 50px auto auto;
+    width: 70%;
+}
+
+
+.main-title {
+    text-align: center;
+}
+
+a {
+    font-size: 18px;
+}
+
+.block-title {
+    font-size: 25px;
+
+}
+
+p {
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.star {
+    display: inline-block;
+}
+
+.pages_block {
+    background-color: #f4f3f4;
+    border: 1px solid #d1d5da;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+a {
+    line-height: 25px;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.menu {
+    height: 20px;
+    text-align: center;
+}
+
+.menu-button {
+    width: 120px;
+    font-size: 15px;
+    height: 30px;
+    background: dodgerblue;
+    color: #FFFFFF;
+    border: 0;
+    margin-left: 20px;
+}
+
+.menu-button:hover {
+    color: dodgerblue;
+    background: #fcfcfc;
+}
+
+h1 {
+    line-height: 70px;
+}

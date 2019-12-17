@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="shortcut icon" href="https://github.githubassets.com/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="https://github.githubassets.com/favicon.ico" type="image/gif">
+    <script src="script/pull_git_list.js"></script>
+    <script src="script/nooffer.js"></script>
+    <script src="script/common.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script>
+        getListItemFunc(function (v) {
+                $$("#projects").appendHtml('<span class="open-project"><svg class="octicon octicon-repo mr-2 text-gray flex-shrink-0" viewBox="0 0 12 16" version="1.1" width="20" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>' +
+                    '<span class="open-project-name"> ' + v.name + '</span><span class="proj-describe">' + v.describe + '</span></span><a class="menu-github-link" href="' + v.doc + '">DOCS</a> <a class="menu-github-link" href="' + v.github + '">GITHUB</a><br>' +
+                    "<br>")
+            }, "script/gitlist.json"
+        );
+
+        function extracted_0(id, url) {
+            getListItemFunc(function (v) {
+                    $$("#" + id).appendHtml('<a class="pages-name-0" href="' + v.url + '">' + v.name + '</a><span class="pages-name-time">' + (v.time === undefined ? "2019-01-01" : v.time) + '</span> <br>');
+                }, url
+            );
+        }
+
+        getList(function (u) {
+            k = (new Date()).valueOf() % u.length;
+            $$("#main-head-title").innerHTML = u[k].name;
+        }, "script/main_title_list.json");
+
+        getListItemFunc(function (v, i) {
+                $$("#docs").appendHtml('<div class="pages_block" id="' + v.id + '"> <span class="block-title">' + v.name + '</span> <br> </div>');
+                $$("#flow-left-menu").appendHtml("<a class='left-menu-a' href='#" + v.id + "'>" + v.name + "<br/></a>");
+                extracted_0(v.id, "script/" + v.ajax + ".json");
+            }, "script/page-title-list.json"
+        );
+
+        getListItemFunc(function (v) {
+                $$("#menu").appendHtml('<button class="menu-button" onclick="' + v.onclick + '">' + v.name + '</button>')
+            }, "data/index-main-menu.json"
+        );
+
+    </script>
+    <title>frank</title>
+
+    <link href="css/index-main.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<div class="main-head-title" id="main-head-title">
+</div>
+
+<h1 class="main-title">
+    Frank PERSONAL MAIN PAGE
+</h1>
+<div class="menu" id="menu">
+</div>
+<div class="docs">
+    <p>Projects</p>
+    <div class="pages_block" id="projects">
+    </div>
+</div>
+<div class="docs" id="docs">
+    <p>Pages</p>
+</div>
+<div class="main-buttom">
+    <a href="http://my.gunplan.top">头条主页</a>&nbsp;
+    <a href="https://github.com/h00001">GitHub主页</a>&nbsp;
+    <a href="https://artist.douban.com/m/zuochengyun/">左程云老师的豆瓣主页</a>
+    <br/>高举中国特色社会主义伟大旗帜，决胜全面建成小康社会
+</div>
+<div class="police">
+    根据非经营性网络管理办法相关规定，该网站备案号为<a href="">辽ICP备17016903</a>&nbsp;
+</div>
+<div class="flow-left-menu" id="flow-left-menu">
+</div>
+
+</body>
+
+</html>

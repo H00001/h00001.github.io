@@ -1,0 +1,220 @@
+[08-28_23:09:58] [   INFO] [PROPERTY][GunNettyPropertyExporter]  maxRunningNum:8
+[08-28_23:09:58] [   INFO] [PROPERTY][GunNettyPropertyExporter]  port:8866
+[08-28_23:09:58] [   INFO] [PROPERTY][GunNettyPropertyExporter]  clientWaitTime:5000
+[08-28_23:09:58] [   INFO] [PROPERTY][GunNettyPropertyExporter]  fileReadBufferMin:512
+[08-28_23:09:58] [   INFO] [PROPERTY][GunNettyPropertyExporter]  connection:1
+[08-28_23:09:58] [   INFO] [PROPERTY][GunNettyPropertyExporter]  profileName:banner.txt
+[08-28_23:09:58] [   INFO] [PROPERTY][GunNettyPropertyExporter]  initWait:1000
+[08-28_23:09:58] [   INFO] [PROPERTY][GunNettyPropertyExporter]  minInterval:10000
+[08-28_23:09:58] [   INFO] [SystemChannelChangedHandle] server running on :8866
+[08-28_23:09:58] [   INFO] BOOTED[GunNettyDefaultObserve]  A high performance net server and a reverse proxy server
+[08-28_23:09:58] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+[08-03_17:55:24] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+
+[08-28_23:10:57] [   INFO] [GunNettyDefaultObserve] filter has been added:top.gunplan.netty.impl.GunNettyStdFirstFilter@69b418d1
+[08-28_23:10:57] [   INFO] [GunNettyDefaultObserve] filter has been added:top.gunplan.netty.example.GunNettyCharsetInboundChecker@30c03a3f
+[08-28_23:10:57] [   INFO] [GunNettyDefaultObserve] filter has been added:top.gunplan.netty.impl.GunNettyStdFirstFilter@797bce66
+[08-28_23:10:57] [   INFO] [GunNettyDefaultObserve] filter has been added:top.gunplan.netty.test.BaseTest$2@3f328103
+[08-28_23:10:57] [   INFO] [GunNettyDefaultObserve] handle has been added:top.gunplan.netty.example.GunNettyStringHandle@100f14e1
+[08-28_23:10:57] [   INFO] [GunNettyDefaultObserve] handle has been added:top.gunplan.netty.example.GunNettyStringHandle@54e48b90
+[08-28_23:11:21] [  DEBUG] [CONNECTION][GunNettyDefaultObserve]  client closed:/127.0.0.1:49870
+[08-28_23:11:21] [   INFO] [GunNettyDefaultObserve] /127.0.0.1:49870:has closed
+[08-28_23:11:32] [   INFO] [GunNettyDefaultObserve] filter has been added:top.gunplan.netty.impl.GunNettyStdFirstFilter@e568d0
+[08-28_23:11:32] [   INFO] [GunNettyDefaultObserve] filter has been added:top.gunplan.netty.example.GunNettyCharsetInboundChecker@e2286bc
+[08-28_23:11:32] [   INFO] [GunNettyDefaultObserve] filter has been added:top.gunplan.netty.impl.GunNettyStdFirstFilter@a1d03a0
+[08-28_23:11:32] [   INFO] [GunNettyDefaultObserve] filter has been added:top.gunplan.netty.test.BaseTest$2@4f1f8c87
+[08-28_23:11:32] [   INFO] [GunNettyDefaultObserve] handle has been added:top.gunplan.netty.example.GunNettyStringHandle@6417ce5c
+[08-28_23:11:32] [   INFO] [GunNettyDefaultObserve] handle has been added:top.gunplan.netty.example.GunNettyStringHandle@7e1aa304
+[08-28_23:13:32] [   INFO] [GunNettyDefaultObserve] filter has been added:top.gunplan.netty.impl.GunNettyStdFirstFilter@1fcd91bd
+[08-28_23:13:32] [   INFO] [GunNettyDefaultObserve] filter has been added:top.gunplan.netty.example.GunNettyCharsetInboundChecker@110a7c34
+[08-28_23:13:32] [   INFO] [GunNettyDefaultObserve] filter has been added:top.gunplan.netty.impl.GunNettyStdFirstFilter@1535facd
+[08-28_23:13:32] [   INFO] [GunNettyDefaultObserve] filter has been added:top.gunplan.netty.test.BaseTest$2@5037760f
+[08-28_23:13:32] [   INFO] [GunNettyDefaultObserve] handle has been added:top.gunplan.netty.example.GunNettyStringHandle@238445cd
+[08-28_23:13:32] [   INFO] [GunNettyDefaultObserve] handle has been added:top.gunplan.netty.example.GunNettyStringHandle@612d6655
+[08-28_23:14:16] [  DEBUG] [CONNECTION][GunNettyDefaultObserve]  client closed:/127.0.0.1:50052
+[08-28_23:14:16] [   INFO] [GunNettyDefaultObserve] /127.0.0.1:50052:has closed
+[08-28_23:15:13] [   INFO] [GunNettyDefaultObserve] filter has been added:top.gunplan.netty.impl.GunNettyStdFirstFilter@76f9bf39
+[08-28_23:15:13] [   INFO] [GunNettyDefaultObserve] filter has been added:top.gunplan.netty.example.GunNettyCharsetInboundChecker@783e5f96
+[08-28_23:15:13] [   INFO] [GunNettyDefaultObserve] filter has been added:top.gunplan.netty.impl.GunNettyStdFirstFilter@7c01d449
+[08-28_23:15:13] [   INFO] [GunNettyDefaultObserve] filter has been added:top.gunplan.netty.test.BaseTest$2@390355ad
+[08-28_23:15:13] [   INFO] [GunNettyDefaultObserve] handle has been added:top.gunplan.netty.example.GunNettyStringHandle@23825c3
+[08-28_23:15:13] [   INFO] [GunNettyDefaultObserve] handle has been added:top.gunplan.netty.example.GunNettyStringHandle@87008fd
+[08-28_23:15:16] [  DEBUG] [CONNECTION][GunNettyDefaultObserve]  client closed:/127.0.0.1:50153
+[08-28_23:15:16] [   INFO] [GunNettyDefaultObserve] /127.0.0.1:50153:has closed
+[08-28_23:22:41] [   INFO] [PROPERTY][GunNettyPropertyExporter]  maxRunningNum:8
+[08-28_23:22:41] [   INFO] [PROPERTY][GunNettyPropertyExporter]  port:8866
+[08-28_23:22:41] [   INFO] [PROPERTY][GunNettyPropertyExporter]  clientWaitTime:5000
+[08-28_23:22:41] [   INFO] [PROPERTY][GunNettyPropertyExporter]  fileReadBufferMin:512
+[08-28_23:22:41] [   INFO] [PROPERTY][GunNettyPropertyExporter]  connection:1
+[08-28_23:22:41] [   INFO] [PROPERTY][GunNettyPropertyExporter]  profileName:banner.txt
+[08-28_23:22:41] [   INFO] [PROPERTY][GunNettyPropertyExporter]  initWait:1000
+[08-28_23:22:41] [   INFO] [PROPERTY][GunNettyPropertyExporter]  minInterval:10000
+[08-28_23:22:41] [   INFO] [SystemChannelChangedHandle] server running on :8866
+[08-28_23:22:41] [   INFO] BOOTED[GunNettyDefaultObserve]  A high performance net server and a reverse proxy server
+[08-28_23:22:41] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+[08-03_17:55:24] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+
+[08-28_23:26:47] [   INFO] [PROPERTY][GunNettyPropertyExporter]  maxRunningNum:8
+[08-28_23:26:47] [   INFO] [PROPERTY][GunNettyPropertyExporter]  port:8866
+[08-28_23:26:47] [   INFO] [PROPERTY][GunNettyPropertyExporter]  clientWaitTime:5000
+[08-28_23:26:47] [   INFO] [PROPERTY][GunNettyPropertyExporter]  fileReadBufferMin:512
+[08-28_23:26:47] [   INFO] [PROPERTY][GunNettyPropertyExporter]  connection:1
+[08-28_23:26:47] [   INFO] [PROPERTY][GunNettyPropertyExporter]  profileName:banner.txt
+[08-28_23:26:47] [   INFO] [PROPERTY][GunNettyPropertyExporter]  initWait:1000
+[08-28_23:26:47] [   INFO] [PROPERTY][GunNettyPropertyExporter]  minInterval:10000
+[08-28_23:26:47] [   INFO] [SystemChannelChangedHandle] server running on :8866
+[08-28_23:26:47] [   INFO] BOOTED[GunNettyDefaultObserve]  A high performance net server and a reverse proxy server
+[08-28_23:26:47] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+[08-03_17:55:24] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+
+[08-28_23:27:18] [   INFO] [PROPERTY][GunNettyPropertyExporter]  maxRunningNum:8
+[08-28_23:27:18] [   INFO] [PROPERTY][GunNettyPropertyExporter]  port:8866
+[08-28_23:27:18] [   INFO] [PROPERTY][GunNettyPropertyExporter]  clientWaitTime:5000
+[08-28_23:27:18] [   INFO] [PROPERTY][GunNettyPropertyExporter]  fileReadBufferMin:512
+[08-28_23:27:18] [   INFO] [PROPERTY][GunNettyPropertyExporter]  connection:1
+[08-28_23:27:18] [   INFO] [PROPERTY][GunNettyPropertyExporter]  profileName:banner.txt
+[08-28_23:27:18] [   INFO] [PROPERTY][GunNettyPropertyExporter]  initWait:1000
+[08-28_23:27:18] [   INFO] [PROPERTY][GunNettyPropertyExporter]  minInterval:10000
+[08-28_23:27:18] [   INFO] [SystemChannelChangedHandle] server running on :8866
+[08-28_23:27:18] [   INFO] BOOTED[GunNettyDefaultObserve]  A high performance net server and a reverse proxy server
+[08-28_23:27:18] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+[08-03_17:55:24] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+
+[08-28_23:31:35] [   INFO] [PROPERTY][GunNettyPropertyExporter]  maxRunningNum:8
+[08-28_23:31:35] [   INFO] [PROPERTY][GunNettyPropertyExporter]  port:8866
+[08-28_23:31:35] [   INFO] [PROPERTY][GunNettyPropertyExporter]  clientWaitTime:5000
+[08-28_23:31:35] [   INFO] [PROPERTY][GunNettyPropertyExporter]  fileReadBufferMin:512
+[08-28_23:31:35] [   INFO] [PROPERTY][GunNettyPropertyExporter]  connection:1
+[08-28_23:31:35] [   INFO] [PROPERTY][GunNettyPropertyExporter]  profileName:banner.txt
+[08-28_23:31:35] [   INFO] [PROPERTY][GunNettyPropertyExporter]  initWait:1000
+[08-28_23:31:35] [   INFO] [PROPERTY][GunNettyPropertyExporter]  minInterval:10000
+[08-28_23:31:35] [   INFO] [SystemChannelChangedHandle] server running on :8866
+[08-28_23:31:35] [   INFO] BOOTED[GunNettyDefaultObserve]  A high performance net server and a reverse proxy server
+[08-28_23:31:35] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+[08-03_17:55:24] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+
+[08-28_23:37:28] [   INFO] [PROPERTY][GunNettyPropertyExporter]  maxRunningNum:8
+[08-28_23:37:28] [   INFO] [PROPERTY][GunNettyPropertyExporter]  port:8866
+[08-28_23:37:28] [   INFO] [PROPERTY][GunNettyPropertyExporter]  clientWaitTime:5000
+[08-28_23:37:28] [   INFO] [PROPERTY][GunNettyPropertyExporter]  fileReadBufferMin:512
+[08-28_23:37:28] [   INFO] [PROPERTY][GunNettyPropertyExporter]  connection:1
+[08-28_23:37:28] [   INFO] [PROPERTY][GunNettyPropertyExporter]  profileName:banner.txt
+[08-28_23:37:28] [   INFO] [PROPERTY][GunNettyPropertyExporter]  initWait:1000
+[08-28_23:37:28] [   INFO] [PROPERTY][GunNettyPropertyExporter]  minInterval:10000
+[08-28_23:37:28] [   INFO] [SystemChannelChangedHandle] server running on :8866
+[08-28_23:37:28] [   INFO] BOOTED[GunNettyDefaultObserve]  A high performance net server and a reverse proxy server
+[08-28_23:37:28] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+[08-03_17:55:24] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+
+[08-28_23:37:29] [   INFO] [SystemChannelChangedHandle] even loop stop:top.gunplan.netty.impl.eventloop.GunCoreConnectionEventLoopImpl@1f83cd07
+[08-28_23:39:13] [   INFO] [PROPERTY][GunNettyPropertyExporter]  maxRunningNum:8
+[08-28_23:39:13] [   INFO] [PROPERTY][GunNettyPropertyExporter]  port:8866
+[08-28_23:39:13] [   INFO] [PROPERTY][GunNettyPropertyExporter]  clientWaitTime:5000
+[08-28_23:39:13] [   INFO] [PROPERTY][GunNettyPropertyExporter]  fileReadBufferMin:512
+[08-28_23:39:13] [   INFO] [PROPERTY][GunNettyPropertyExporter]  connection:1
+[08-28_23:39:13] [   INFO] [PROPERTY][GunNettyPropertyExporter]  profileName:banner.txt
+[08-28_23:39:13] [   INFO] [PROPERTY][GunNettyPropertyExporter]  initWait:1000
+[08-28_23:39:13] [   INFO] [PROPERTY][GunNettyPropertyExporter]  minInterval:10000
+[08-28_23:39:13] [   INFO] [SystemChannelChangedHandle] server running on :8866
+[08-28_23:39:13] [   INFO] BOOTED[GunNettyDefaultObserve]  A high performance net server and a reverse proxy server
+[08-28_23:39:13] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+[08-03_17:55:24] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+
+[08-28_23:39:30] [   INFO] [SystemChannelChangedHandle] even loop stop:top.gunplan.netty.impl.eventloop.GunCoreConnectionEventLoopImpl@327bf889
+[08-28_23:45:24] [   INFO] [PROPERTY][GunNettyPropertyExporter]  maxRunningNum:8
+[08-28_23:45:24] [   INFO] [PROPERTY][GunNettyPropertyExporter]  port:8866
+[08-28_23:45:24] [   INFO] [PROPERTY][GunNettyPropertyExporter]  clientWaitTime:5000
+[08-28_23:45:24] [   INFO] [PROPERTY][GunNettyPropertyExporter]  fileReadBufferMin:512
+[08-28_23:45:24] [   INFO] [PROPERTY][GunNettyPropertyExporter]  connection:1
+[08-28_23:45:24] [   INFO] [PROPERTY][GunNettyPropertyExporter]  profileName:banner.txt
+[08-28_23:45:24] [   INFO] [PROPERTY][GunNettyPropertyExporter]  initWait:1000
+[08-28_23:45:24] [   INFO] [PROPERTY][GunNettyPropertyExporter]  minInterval:10000
+[08-28_23:45:24] [   INFO] [SystemChannelChangedHandle] server running on :8866
+[08-28_23:45:24] [   INFO] BOOTED[GunNettyDefaultObserve]  A high performance net server and a reverse proxy server
+[08-28_23:45:24] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+[08-03_17:55:24] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+
+[08-28_23:45:25] [   INFO] [SystemChannelChangedHandle] even loop stop:top.gunplan.netty.impl.eventloop.GunCoreConnectionEventLoopImpl@5dd1ed37
+[08-28_23:45:40] [   INFO] [PROPERTY][GunNettyPropertyExporter]  maxRunningNum:8
+[08-28_23:45:40] [   INFO] [PROPERTY][GunNettyPropertyExporter]  port:8866
+[08-28_23:45:40] [   INFO] [PROPERTY][GunNettyPropertyExporter]  clientWaitTime:5000
+[08-28_23:45:40] [   INFO] [PROPERTY][GunNettyPropertyExporter]  fileReadBufferMin:512
+[08-28_23:45:40] [   INFO] [PROPERTY][GunNettyPropertyExporter]  connection:1
+[08-28_23:45:40] [   INFO] [PROPERTY][GunNettyPropertyExporter]  profileName:banner.txt
+[08-28_23:45:40] [   INFO] [PROPERTY][GunNettyPropertyExporter]  initWait:1000
+[08-28_23:45:40] [   INFO] [PROPERTY][GunNettyPropertyExporter]  minInterval:10000
+[08-28_23:45:40] [   INFO] [SystemChannelChangedHandle] server running on :8866
+[08-28_23:45:40] [   INFO] BOOTED[GunNettyDefaultObserve]  A high performance net server and a reverse proxy server
+[08-28_23:45:40] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+[08-03_17:55:24] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+
+[08-28_23:46:01] [   INFO] [SystemChannelChangedHandle] even loop stop:top.gunplan.netty.impl.eventloop.GunCoreConnectionEventLoopImpl@65ddbd41
+[08-28_23:50:00] [   INFO] [PROPERTY][GunNettyPropertyExporter]  maxRunningNum:8
+[08-28_23:50:00] [   INFO] [PROPERTY][GunNettyPropertyExporter]  port:8866
+[08-28_23:50:00] [   INFO] [PROPERTY][GunNettyPropertyExporter]  clientWaitTime:5000
+[08-28_23:50:00] [   INFO] [PROPERTY][GunNettyPropertyExporter]  fileReadBufferMin:512
+[08-28_23:50:00] [   INFO] [PROPERTY][GunNettyPropertyExporter]  connection:1
+[08-28_23:50:00] [   INFO] [PROPERTY][GunNettyPropertyExporter]  profileName:banner.txt
+[08-28_23:50:00] [   INFO] [PROPERTY][GunNettyPropertyExporter]  initWait:1000
+[08-28_23:50:00] [   INFO] [PROPERTY][GunNettyPropertyExporter]  minInterval:10000
+[08-28_23:50:00] [   INFO] [SystemChannelChangedHandle] server running on :8866
+[08-28_23:50:00] [   INFO] BOOTED[GunNettyDefaultObserve]  A high performance net server and a reverse proxy server
+[08-28_23:50:00] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+[08-03_17:55:24] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+
+[08-28_23:50:01] [   INFO] [SystemChannelChangedHandle] even loop stop:top.gunplan.netty.impl.eventloop.GunCoreConnectionEventLoopImpl@51d63095
+[08-28_23:50:10] [   INFO] [PROPERTY][GunNettyPropertyExporter]  maxRunningNum:8
+[08-28_23:50:10] [   INFO] [PROPERTY][GunNettyPropertyExporter]  port:8866
+[08-28_23:50:10] [   INFO] [PROPERTY][GunNettyPropertyExporter]  clientWaitTime:5000
+[08-28_23:50:10] [   INFO] [PROPERTY][GunNettyPropertyExporter]  fileReadBufferMin:512
+[08-28_23:50:10] [   INFO] [PROPERTY][GunNettyPropertyExporter]  connection:1
+[08-28_23:50:10] [   INFO] [PROPERTY][GunNettyPropertyExporter]  profileName:banner.txt
+[08-28_23:50:10] [   INFO] [PROPERTY][GunNettyPropertyExporter]  initWait:1000
+[08-28_23:50:10] [   INFO] [PROPERTY][GunNettyPropertyExporter]  minInterval:10000
+[08-28_23:50:10] [   INFO] [SystemChannelChangedHandle] server running on :8866
+[08-28_23:50:10] [   INFO] BOOTED[GunNettyDefaultObserve]  A high performance net server and a reverse proxy server
+[08-28_23:50:10] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+[08-03_17:55:24] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+
+[08-28_23:50:11] [   INFO] [SystemChannelChangedHandle] even loop stop:top.gunplan.netty.impl.eventloop.GunCoreConnectionEventLoopImpl@22d86f2d
+[08-28_23:51:45] [   INFO] [PROPERTY][GunNettyPropertyExporter]  maxRunningNum:8
+[08-28_23:51:45] [   INFO] [PROPERTY][GunNettyPropertyExporter]  port:8866
+[08-28_23:51:45] [   INFO] [PROPERTY][GunNettyPropertyExporter]  clientWaitTime:5000
+[08-28_23:51:45] [   INFO] [PROPERTY][GunNettyPropertyExporter]  fileReadBufferMin:512
+[08-28_23:51:45] [   INFO] [PROPERTY][GunNettyPropertyExporter]  connection:1
+[08-28_23:51:45] [   INFO] [PROPERTY][GunNettyPropertyExporter]  profileName:banner.txt
+[08-28_23:51:45] [   INFO] [PROPERTY][GunNettyPropertyExporter]  initWait:1000
+[08-28_23:51:45] [   INFO] [PROPERTY][GunNettyPropertyExporter]  minInterval:10000
+[08-28_23:51:45] [   INFO] [SystemChannelChangedHandle] server running on :8866
+[08-28_23:51:45] [   INFO] BOOTED[GunNettyDefaultObserve]  A high performance net server and a reverse proxy server
+[08-28_23:51:45] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+[08-03_17:55:24] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+
+[08-28_23:53:33] [   INFO] [PROPERTY][GunNettyPropertyExporter]  maxRunningNum:8
+[08-28_23:53:33] [   INFO] [PROPERTY][GunNettyPropertyExporter]  port:8866
+[08-28_23:53:33] [   INFO] [PROPERTY][GunNettyPropertyExporter]  clientWaitTime:5000
+[08-28_23:53:33] [   INFO] [PROPERTY][GunNettyPropertyExporter]  fileReadBufferMin:512
+[08-28_23:53:33] [   INFO] [PROPERTY][GunNettyPropertyExporter]  connection:1
+[08-28_23:53:33] [   INFO] [PROPERTY][GunNettyPropertyExporter]  profileName:banner.txt
+[08-28_23:53:33] [   INFO] [PROPERTY][GunNettyPropertyExporter]  initWait:1000
+[08-28_23:53:33] [   INFO] [PROPERTY][GunNettyPropertyExporter]  minInterval:10000
+[08-28_23:53:33] [   INFO] [SystemChannelChangedHandle] server running on :8866
+[08-28_23:53:33] [   INFO] BOOTED[GunNettyDefaultObserve]  A high performance net server and a reverse proxy server
+[08-28_23:53:33] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+[08-03_17:55:24] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+
+[08-28_23:53:34] [   INFO] [SystemChannelChangedHandle] even loop stop:top.gunplan.netty.impl.eventloop.GunCoreConnectionEventLoopImpl@215de440
+[08-28_23:57:32] [   INFO] [PROPERTY][GunNettyPropertyExporter]  maxRunningNum:8
+[08-28_23:57:32] [   INFO] [PROPERTY][GunNettyPropertyExporter]  port:8866
+[08-28_23:57:32] [   INFO] [PROPERTY][GunNettyPropertyExporter]  clientWaitTime:5000
+[08-28_23:57:32] [   INFO] [PROPERTY][GunNettyPropertyExporter]  fileReadBufferMin:512
+[08-28_23:57:32] [   INFO] [PROPERTY][GunNettyPropertyExporter]  connection:1
+[08-28_23:57:32] [   INFO] [PROPERTY][GunNettyPropertyExporter]  profileName:banner.txt
+[08-28_23:57:32] [   INFO] [PROPERTY][GunNettyPropertyExporter]  initWait:1000
+[08-28_23:57:32] [   INFO] [PROPERTY][GunNettyPropertyExporter]  minInterval:10000
+[08-28_23:57:32] [   INFO] [SystemChannelChangedHandle] server running on :8866
+[08-28_23:57:32] [   INFO] BOOTED[GunNettyDefaultObserve]  A high performance net server and a reverse proxy server
+[08-28_23:57:32] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+[08-03_17:55:24] [ STDOUT] [GunNettyDefaultObserve] g.g.t.t.BOOTED
+
+[08-28_23:57:33] [   INFO] [SystemChannelChangedHandle] even loop stop:top.gunplan.netty.impl.eventloop.GunCoreConnectionEventLoopImpl@1f83cd07
