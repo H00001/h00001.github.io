@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>library</title>
+    <script src="script/nooffer.js"></script>
+    <script src="script/pull_git_list.js"></script>
 </head>
 <body>
 <h1>WELCOME TO LIBRARY</h1>
+<script>
+    extracted(function (data) {
+        dt = data.split("\n");
+        for (let i = 0; i < dt.length; i++) {
+            $$("#main-in").appendHtml(dt[i] + "<br>")
+        }
+    }, "./data/library", false)
+</script>
+<div id="main-in"></div>
 </body>
 </html>
