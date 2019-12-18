@@ -11,7 +11,7 @@
 <h1>WELCOME TO LIBRARY</h1>
 <script>
     extracted(function (data) {
-        dt = data.split("\n");
+        const dt = data.split("\n");
         for (let i = 0; i < dt.length; i++) {
             $$("#main-in").appendHtml("<a href='" + dt[i] + "'>" + dt[i] + "</a><br>")
         }
