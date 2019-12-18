@@ -12,7 +12,7 @@ function extracted(func, url, isToObj, error) {
 }
 
 function requestData(func, url, error) {
-    var request = new XMLHttpRequest();
+    const request = new XMLHttpRequest();
     request.open("GET", url, true);
     request.send();
     request.onreadystatechange = function () {
@@ -37,4 +37,3 @@ function getListItemFunc(func, url) {
         }
     }, url)
 }
-
