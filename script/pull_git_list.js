@@ -6,8 +6,10 @@ function extracted(func, url, isToObj, error) {
             func(data)
         }
     }, url, error === undefined ? function (err) {
-        console.log("error has been caught at last layer");
-        console.log(err)
+        (function f(e) {
+            console.log("error has been caught at last layer");
+            console.log(e)
+        })(err)
     } : error);
 }
 
