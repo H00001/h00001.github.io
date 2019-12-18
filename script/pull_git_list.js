@@ -1,15 +1,24 @@
 function extracted(func, url, isToObj, error) {
+    requestData(function (data) {
+        if (isToObj === true || isToObj === undefined) {
+            func(eval("(" + data + ")"));
+        } else {
+            func(data)
+        }
+    }, url, error === undefined ? function (err) {
+        console.log("error has been caught at last layer");
+        console.log(err)
+    } : error);
+}
+
+function requestData(func, url, error) {
     var request = new XMLHttpRequest();
     request.open("GET", url, true);
     request.send();
     request.onreadystatechange = function () {
         if (request.readyState === 4 && request.status === 200) {
             try {
-                if (isToObj === true || isToObj === undefined) {
-                    func(eval("(" + request.responseText + ")"));
-                } else {
-                    func(request.responseText)
-                }
+                func(request.responseText)
             } catch (e) {
                 error(e)
             }
