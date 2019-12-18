@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 dir="./library-book"
-library="data/library"
+library="./data/library"
 
 
 function findByDirectory() {
