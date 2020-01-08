@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+<pre>
+
+
+
+taskgated(8)              BSD System Manager's Manual             taskgated(8)
+
+NNAAMMEE
+     ttaasskkggaatteedd -- task_for_pid access control daemon
+
+SSYYNNOOPPSSIISS
+     ttaasskkggaatteedd [--ss] [--tt _t_i_m_e_o_u_t] [--ii _p_i_d]
+
+DDEESSCCRRIIPPTTIIOONN
+     ttaasskkggaatteedd is a system daemon that implements a policy for the
+     task_for_pid system service.  When the kernel is asked for the task port
+     of a process, and preliminary access control checks pass, it invokes this
+     daemon (via launchd) to make the decision.
+
+OOPPTTIIOONNSS
+     --tt _t_i_m_e_o_u_t
+              The daemon will quit after that many seconds of inactivity. It
+              will be relaunched by launchd as needed. A timeout of zero can
+              be specified to make the daemon quit after servicing each
+              request, but a small positive timeout is better for performance.
+
+     --ii _p_i_d   Inject the service port of ttaasskkggaatteedd into the process with the
+              given pid, rather than relying on launchd to install it system-
+              wide. This is for testing only, and requires the launchd config-
+              uration for ttaasskkggaatteedd to be removed.
+
+AAUUTTHHOORRIIZZAATTIIOONN RRIIGGHHTTSS
+     _s_y_s_t_e_m_._p_r_i_v_i_l_e_g_e_._t_a_s_k_p_o_r_t  Authorization right used to check access of
+                                allowed (but not safe) callers.
+
+IINNFFOO KKEEYYSS
+     _S_e_c_T_a_s_k_A_c_c_e_s_s  A value of "allowed" is required for any program that
+                    wants access to task ports. A value of "safe" bypasses
+                    authorization checks if so configured.  Code must be
+                    signed by any system-trusted signing authority.
+
+FFIILLEESS
+     /etc/authorization  to configure the authorization used.
+     /System/Library/LaunchDaemons/com.apple.taskgated
+                         startup configuration file for ttaasskkggaatteedd
+
+SSEEEE AALLSSOO
+     security(1), launchd(8)
+
+HHIISSTTOORRYY
+     ttaasskkggaatteedd was first introduced in Mac OS 10.5 (Leopard).
+
+     Procmod and procview support (-p) was removed in 10.11.
+
+     Certain software updates of Mac OS 10.4 (Tiger) introduced the convention
+     requiring membership in the procmod or procview groups to control task
+     port access. Before that, any process could obtain the task port of any
+     other process with the same user-id.
+
+Darwin                          January 8, 2020                         Darwin
+</pre>
+</body>
+</html>
