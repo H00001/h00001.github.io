@@ -11,7 +11,7 @@
 <h1>WELCOME TO LIBRARY</h1>
 <script>
     getListItemFunc(function (data) {
-            $$("#main-in").appendHtml("<a href='" + data.url + "'>" + dt.name + "</a><br>")
+            $$("#main-in").appendHtml("<a href='" + data.url + "'>" + data.name + "</a><br>")
     }, "./data/library")
 </script>
 <div id="main-in"></div>
