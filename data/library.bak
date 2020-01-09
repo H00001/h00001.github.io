@@ -1,5 +1,6 @@
-SYSTEM INIT DATA TIME:Thu Jan  9 15:16:31 CST 2020
-./library-book/P1.1/2019年计算机考研真题及答案完整版.pdf
-./library-book/P1.1/linux内核设计的艺术.0.pdf
-./library-book/P1.1/linux内核设计与实现.pdf
-./library-book/P1.1/华为H12-223-CHS-HCNP-R-
+[
+{"name":"2019年计算机考研真题及答案完整版.pdf","url":"./library-book/P1.1/2019年计算机考研真题及答案完整版.pdf","type":0},
+{"name":"linux内核设计的艺术.0.pdf","url":"./library-book/P1.1/linux内核设计的艺术.0.pdf","type":0},
+{"name":"linux内核设计与实现.pdf","url":"./library-book/P1.1/linux内核设计与实现.pdf","type":0},
+{"name":"华为H12-223-CHS-HCNP-R-","url":"./library-book/P1.1/华为H12-223-CHS-HCNP-R-","type":0},
+]

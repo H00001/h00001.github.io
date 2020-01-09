@@ -11,10 +11,11 @@ function findByDirectory() {
         if [[ -d ${next} ]]; then
             findByDirectory ${next}
         else
-            echo ${next} >> "$library"
+            echo "{\"name\":\"${name}\",\"url\":\"${next}\",\"type\":0}," >> "$library"
         fi
     done
 }
-echo "SYSTEM INIT DATA TIME:$(date)" > "$library"
+echo "[" > "$library"
 findByDirectory "${dir}"
+echo "]" >> "$library"
 cmp ${library} ${library}.bak

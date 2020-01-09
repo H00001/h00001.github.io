@@ -10,12 +10,9 @@
 <body>
 <h1>WELCOME TO LIBRARY</h1>
 <script>
-    extracted(function (data) {
-        const dt = data.split("\n");
-        for (let i = 0; i < dt.length; i++) {
-            $$("#main-in").appendHtml("<a href='" + dt[i] + "'>" + dt[i] + "</a><br>")
-        }
-    }, "./data/library", false)
+    getListItemFunc(function (data) {
+            $$("#main-in").appendHtml("<a href='" + data.url + "'>" + dt.name + "</a><br>")
+    }, "./data/library")
 </script>
 <div id="main-in"></div>
 </body>
