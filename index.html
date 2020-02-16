@@ -14,7 +14,7 @@
 	    background-image: linear-gradient(120deg, #155799, #159957);
 	}
 	</style>
-    <script src="script/pull_git_list.js"></script>
+    <script src="script/pull_gft_list.js"></script>
     <script src="script/nooffer.js"></script>
     <script src="script/common.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -30,7 +30,7 @@
         function extracted_0(id, url) {
             getListItemFunc(function (v) {
                     $$("#" + id).appendHtml('<a class="pages-name-0" href="' + v.url + '">' + v.name + '</a><span class="pages-name-time">' + (v.time === undefined ? "2019-01-01" : v.time) + '</span> <br>');
-                }, url
+               }, url
             );
         }
 
