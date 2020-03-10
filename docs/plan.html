@@ -8,39 +8,11 @@
 </head>
 <body>
 <div id="content">
-    ## plan at school
-    * 每天读一篇英文文档
-    * 每天读一个源码
-    * 每天做一道算法题
-    * 每天背 50 个单词
-    * 读书，每日不少于2h
 
-    ## books
-    ### 专业相关
-    1. 计算机组成与设计
-    2. unix 编程艺术
-    3. 深入剖析 Linux 内核
-    4. Unix 核心编程/网络编程
-    5. TCP/IP 详解卷
-    6. 算法导论
-    7. 计算机体系结构
-    8. CPU 设计原理
-    ...持续补充
-    ### 非专业相关
-    1. 抽象代数
-    2. 离散数学
-    3. 复变函数
-    4. 信号与系统
-    5. 数字电路
-    5. 宏观经济学
-    6. 明史
-    7. 三国志
-    8. 习近平用典
-    ...持续补充
 </div>
 
 <script>
-    $.get('./Static/md/index.md', function(response, status, xhr){
+    $.get('./index.md', function (response, status, xhr) {
         $("#content").html(marked(response));
     });
 </script>
