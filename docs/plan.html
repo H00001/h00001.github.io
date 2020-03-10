@@ -8,11 +8,10 @@
 </head>
 <body>
 <div id="content">
-
 </div>
 
 <script>
-    $.get('./index.md', function (response, status, xhr) {
+    $.get('./plan.md', function (response, status, xhr) {
         $("#content").html(marked(response));
     });
 </script>
