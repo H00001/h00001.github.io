@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>plan-at-school</title>
+    <script src="https://cdn.bootcss.com/marked/0.8.0/marked.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<style>
+	#content{
+	width:800px;
+	margin:auto;
+	}
+</style>
+</head>
+<body>
+<div id="content">
+</div>
+
+<script>
+    $.get('./newos.md', function (response, status, xhr) {
+        $("#content").html(marked(response));
+    });
+</script>
+</body>
+</html>

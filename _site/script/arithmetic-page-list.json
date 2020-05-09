@@ -1,0 +1,27 @@
+[
+  {
+    "name": "raft algorithm",
+    "describe": "",
+    "url": "raft/thesecretlivesofdata.com/index.html"
+  },
+  {
+    "name": "raft algorithm 英文论文",
+    "describe": "",
+    "url": "docs/raft.pdf"
+  },
+  {
+    "name": "raft algorithm 中文论文",
+    "describe": "",
+    "url": "docs/raft-zh.pdf"
+  },
+  {
+    "name": "分布式一致性",
+    "describe": "",
+    "url": "https://www.toutiao.com/i6736462426071368195/"
+  },
+  {
+    "name": "动态规划，零钱问题",
+    "describe": "",
+    "url": "docs/0000007.html"
+  }
+]
