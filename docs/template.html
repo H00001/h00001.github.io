@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>a new os</title>
+    <title>__title__</title>
     <script src="https://cdn.bootcss.com/marked/0.8.0/marked.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <style>
@@ -13,13 +13,15 @@
 </style>
 </head>
 <body>
+<a href="https://h00001.github.io">回主站</a>
 <div id="content">
 </div>
 
 <script>
-    $.get('./newos.md', function (response, status, xhr) {
+    $.get('./__name__.md', function (response, status, xhr) {
         $("#content").html(marked(response));
     });
 </script>
 </body>
 </html>
+
