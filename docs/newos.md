@@ -1,4 +1,4 @@
-# 一个智能化的os kernel 
+# 一个智能化的os kernel [机密]
 
 >  IOT 时代下的智能化内核
 
@@ -9,12 +9,12 @@
 ![Untitled Diagram](https://h00001.github.io/data/u.svg)
 
 
-|node type|node job|
-|-|:--|
-|Data node|It can calculate at itself.Data nodes can backup each other and communicate with each other for distributed computing.|
-|calculator node|Assign the calculation task to the data node, summarize the calculation result of the data node, and pass it to the control node|
-|Control node|The control node can communicate with other control nodes and vote on some events.|
-|config center|config parameters|
+| node role       | node job                                                     |
+| --------------- | :----------------------------------------------------------- |
+| Data node       | It can calculate at itself. Data nodes can backup each other and communicate with each other for distributed computing. |
+| calculator node | Assign the calculation task to the data node, summarize the calculation result of the data node, and pass it to the control node |
+| Control node    | The control node can communicate with other control nodes and vote on some events. |
+| config center   | config parameters                                            |
 
 soft bus:用来传递数据和事件[event]
 
@@ -37,16 +37,17 @@ soft bus:用来传递数据和事件[event]
 3. 用户可以进行接口 export，这种接口导出可以传播到整个系统，分布式系统的其他节点可以进行调用。
 4. 事件[event]: 可以是系统事件，也可以是用户事件。事件会随总线进行传播，传递给其他节点进行响应。其他节点如同响应本地事件一样。
 5. 协调服务，包括所需要的分布式锁，分布式队列相关基础服务
+6. 所有的用户只能使用用户态编程，若是想使用内核服务，必须调用内核 `handle` 使用内核服务。
 
 ## 优势
 
 ### 远程调用
 
-远程调用如同本地调用一样
+调用远程的资源，如同调用本地的资源一样，用户也无需显式记忆资源所处于的位置，而只需要使用即可。
 
-例如用户可以对 camera 进行编程，导出 `screemshort()->picture`·接口，在分布式系统中进行传递
+用户可以对设备进行编程，系统级别的将接口导出，导出的接口可以在整个分布式系统中传播。
 
-那么对于控制中心进行编程，完全可以直接调用函数
+例如用户可以对 camera 进行编程，导出 `screemshort()->picture`·接口，在分布式系统中进行传递，那么对于控制中心进行编程，完全可以直接调用函数
 
 ```
 camera[camera_id].screemshort()
@@ -56,7 +57,7 @@ camera[camera_id].screemshort()
 
 ### 远程进程间通信
 
-远程进程间痛惜和本地进程间通信一样，内核会选择一条最合理的通道，速度和方式进行远程通信。当然，分布式锁也属于远程进程通信的一种。
+远程进程间通信和本地进程间通信一样，用户无需获知这个进程所处于的位置，只需要按照本地的方式使用即可，内核会选择一条最合理的通道，速度和方式进行远程通信。当然，分布式锁也属于远程进程通信的一种。
 
 ### 分布式事件
 
@@ -78,15 +79,16 @@ def fn_door_open(message *msg){
   //当然，铃也在远程，导出<function> doRing()
 }
 ```
+
 #### 软总线中断
 
-优先级很高的事件，可以打断其他任务
+优先级很高的事件，可以打断其他任务执行，一般用在紧急任务处理。
 
 ### 动态注册
 
-新的节点接口可以动态注册到系统中，也可以离开或转移。
+新的节点接口可以动态注册到系统中，也可以离开或转移。例如，可以动态向系统添加数据节点「建议不开源」，也可以动态删除这个节点，这些对于内核的用户都是没有感知的。
 
-### 进程迁移
+### 用户进程迁移
 
 1. 分布式系统会定期扫描系统节点压力情况，针对有压力过大的节点，对内部执行的进程进行迁移，迁移到压力小的节点。
 2. 如果该节点有更加紧急的任务。
@@ -103,12 +105,19 @@ task manager会合理拆分任务，分配到其他节点。当然也会根据�
 
 遇到需要高速，紧急地数据，task manager会和通信节点之间建立临时紧急通道，用来快速传输数据。方式的不同导致通道的性能影响会进行记录和分析，下次使用，会建立最优的方式。这个操作对用户没有感知。例如：使用者观看高清摄像头数据，高清视频数据会建立视频节点到控制节点，甚至智能˙终端节点的直接数据通道，这个通道在停止观看后被销毁。
 
+### 统一的参数管理
+
+使用配置中心，统一管理系统参数。
+
+### 统一的资源管理
+
+整个系统如同一个系统一样，会将所有资源进行整合，用户级别的进程，也可以称作为任务，任务可以被分配在任意的节点执行，同时任务也可以进行迁移，拆分，跃迁。同时，整个系统之存在一个虚拟文件目录。
+
 ## 举个🌰
 
 某人回家，带智能手表，进入范围后，检测节点检测出手表（end node），向系统发送了一条事件，最近的数据节点收到事件后开始和表进行通信，获取的运动记录，同步到数据中心，进行今日运动的大数据计算。控制中心调用表的时间接口，发现时间是22:00，将所有灯亮起。
 
 这个例子或许很简单，但是如果使用其他系统，就配置而言都是很复杂的。但是在这个 os 中，编程如同苏联生产导弹一样容易。
-
 
 
 
