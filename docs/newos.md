@@ -2,19 +2,19 @@
 
 >  IOT 时代下的智能化内核
 
-这个的 os 的理念应用于「IOT」，也是为 IOT 中的「智能家居」所服务的。所以，一切的设想和思路，都是为了提升智能家居 os 的体验所设计。
+这个的 os 的理念应用于「IOT」，属于分布式普适系统。
 
-目前，智能家居还不够成熟，内部存在诸多问题，比如架构松散，指令效率不高，配置复杂，智能存在局限性等问题。为了解决这些问题，我设计出了一个智能家居的理念，用于统一整个智能家居系统。
+目前，智能家居还不够成熟，内部存在诸多问题，比如架构松散，指令效率不高，配置复杂，智能存在局限性等问题。为了解决这些问题，我设计出了一个分布式计算的理念，用于统一整个智能家居系统。
 
 ![Untitled Diagram](https://h00001.github.io/data/u.svg)
 
 
-| node role       | node job                                                     |
-| --------------- | :----------------------------------------------------------- |
-| Data node       | It can calculate at itself. Data nodes can backup each other and communicate with each other for distributed computing. |
-| calculator node | Assign the calculation task to the data node, summarize the calculation result of the data node, and pass it to the control node |
-| Control node    | The control node can communicate with other control nodes and vote on some events. |
-| config center   | config parameters                                            |
+|node role|node job|
+|-|:--|
+|Data node|It can calculate at itself. Data nodes can backup each other and communicate with each other for distributed computing.|
+|calculator node|Assign the calculation task to the data node, summarize the calculation result of the data node, and pass it to the control node|
+|Control node|The control node can communicate with other control nodes and vote on some events.|
+|config center|config parameters|
 
 soft bus:用来传递数据和事件[event]
 
@@ -79,10 +79,9 @@ def fn_door_open(message *msg){
   //当然，铃也在远程，导出<function> doRing()
 }
 ```
-
 #### 软总线中断
 
-优先级很高的事件，可以打断其他任务执行，一般用在紧急任务处理。
+优先级很高的事件，会随软中线传播到整个系统，分布式系统中的其他部分必须对这个事件作出响应，这个中断可以打断其他任务执行，一般用在紧急任务处理。
 
 ### 动态注册
 
@@ -95,32 +94,39 @@ def fn_door_open(message *msg){
 
 ### 任务迁移
 
-分配者肯定会将任务分配到离该任务数据最近的数据节点进行机选，但是，当系统发生变化时，任务会进行迁移到其他节点。
+分配者肯定会将任务分配到离该任务数据最近的数据节点进行计算，但是，当系统发生变化时，任务会进行迁移到其他节点。以对于数据计算进行优化适应。
 
 ### 任务拆分
 
-task manager会合理拆分任务，分配到其他节点。当然也会根据系统当前运行状态，选择不同的拆分方案。
+task manager会合理拆分任务，分配到其他节点。当然也会根据系统当前运行状态，选择不同的拆分方案。开发者可以使用一种 `fork/join `/`map/reduce`的开发模式，在代码中主动进行任务拆分。
 
 ### 点对点通信
 
-遇到需要高速，紧急地数据，task manager会和通信节点之间建立临时紧急通道，用来快速传输数据。方式的不同导致通道的性能影响会进行记录和分析，下次使用，会建立最优的方式。这个操作对用户没有感知。例如：使用者观看高清摄像头数据，高清视频数据会建立视频节点到控制节点，甚至智能˙终端节点的直接数据通道，这个通道在停止观看后被销毁。
+遇到需要高速，紧急地数据，task manager会和通信节点之间建立临时紧急通道，例如TCP，UPD，串口通道，用来快速传输数据。方式的不同导致通道的性能影响会进行记录和分析。随着建立通道的学习，会根据算法选择最优的方式。这个操作对用户没有感知。例如：使用者观看高清摄像头数据，高清视频数据会建立视频节点到控制节点，甚至智能˙终端节点的直接数据通道，这个通道在停止观看后被销毁。
 
 ### 统一的参数管理
 
-使用配置中心，统一管理系统参数。
+使用配置中心，统一管理系统参数。这个参数会根据使用发生变化，直到达到最优的参数。
 
 ### 统一的资源管理
 
 整个系统如同一个系统一样，会将所有资源进行整合，用户级别的进程，也可以称作为任务，任务可以被分配在任意的节点执行，同时任务也可以进行迁移，拆分，跃迁。同时，整个系统之存在一个虚拟文件目录。
 
+### 可配置的优先级，绑定的执行节点
+计算节点，优先级可以由编程者主动设置，这样一些很紧急的任务不会因为得不到执行产生事故。
+
+### 内核任务向上迁移
+
+将许多内核界别的任务，向上移动到了用户层，这样底层开发着可以根据系统情况配置系统。
+
 ## 举个🌰
 
-某人回家，带智能手表，进入范围后，检测节点检测出手表（end node），向系统发送了一条事件，最近的数据节点收到事件后开始和表进行通信，获取的运动记录，同步到数据中心，进行今日运动的大数据计算。控制中心调用表的时间接口，发现时间是22:00，将所有灯亮起。
+操作一个分布式系统，就像操作系统一个系统一样，只需要对于操作系统的一点就行编程，就可以传递给到这个系统，
 
 这个例子或许很简单，但是如果使用其他系统，就配置而言都是很复杂的。但是在这个 os 中，编程如同苏联生产导弹一样容易。
 
+---
 
-
-
+written by FrankHan
 
 
