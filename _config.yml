@@ -21,7 +21,7 @@
 title: frank personal webset
 email: mail-noreply@gunplan.top
 description: >- # this means to ignore newlines until "baseurl:"
-	mail:lnpj.office@gmail.com
+    mail:lnpj.office@gmail.com
 baseurl: "https://h00001.github.io" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: frank

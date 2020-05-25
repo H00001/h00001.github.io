@@ -1,0 +1,74 @@
+[
+  {
+    "id": "go-page",
+    "describe": "",
+    "name": "Golang",
+    "ajax": "go-page-list"
+  },
+  {
+    "id": "java-page",
+    "describe": "",
+    "name": "Java",
+    "ajax": "java-page-list"
+  },
+  {
+    "id": "os-page",
+    "describe": "",
+    "name": "Linux Kernel",
+    "ajax": "os-page-list"
+  },
+  {
+    "id": "redis-page",
+    "describe": "",
+    "name": "Redis",
+    "ajax": "redis-page-list"
+  },
+  {
+    "id": "arithmetic-page",
+    "describe": "",
+    "name": "Arithmetic",
+    "ajax": "arithmetic-page-list"
+  },
+  {
+    "id": "best-practice-page",
+    "describe": "",
+    "name": "Best Practice",
+    "ajax": "best-practice-page-list"
+  },
+  {
+    "id": "network-page",
+    "describe": "",
+    "name": "NetWork",
+    "ajax": "network-page-list"
+  },
+  {
+    "id": "docker-page",
+    "describe": "",
+    "name": "Docker",
+    "ajax": "docker-page-list"
+  },
+  {
+    "id": "kafka",
+    "describe": "",
+    "name": "kafka",
+    "ajax": "kafka-page-list"
+  },
+  {
+    "id": "open-file",
+    "describe": "",
+    "name": "例会可公开文档",
+    "ajax": "open-file-page-list"
+  },
+  {
+    "id": "big-data",
+    "describe": "",
+    "name": "大数据",
+    "ajax": "big-data-page-list"
+  },
+  {
+    "id": "mysql",
+    "describe": "",
+    "name": "mysql",
+    "ajax": "mysql-page-list"
+  }
+]
