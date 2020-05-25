@@ -1,3 +1,0 @@
-#!/bin/bash
-docker build -t blog:v0.1 .
-docker run -it -d -p 7778:7778 blog:v0.1 /bin/bash
