@@ -4,17 +4,53 @@
 
 这个的 os 的理念应用于「IOT」，属于分布式普适系统。
 
-目前，智能家居还不够成熟，内部存在诸多问题，比如架构松散，指令效率不高，配置复杂，智能存在局限性等问题。为了解决这些问题，我设计出了一个分布式计算的理念，用于统一整个智能家居系统。
+
+
+# 模块化操作系统
+
+## 模块化的操作系统，操作系统如果模块一样组装
+
+![img](https://bkimg.cdn.bcebos.com/pic/ac6eddc451da81cb226e0cb75666d0160924313b)
+在接口设计原则中，模块的划分和规定好模块之间的接口。如果我们在划分模块时，将模块划分得太小，虽然可以降低模块本身的复杂性，但会引起模块之间的联系过多，而会造成系统比较混乱；如果将模块划分得过大，又会增加模块内部的复杂性，使内部的联系增加。因此，在划分模块时，应在两者之间进行权衡。
+
+## 模块
+
+模块是构成系统的 一个单位 , 它包含数据和过程 。 在操作系统的设计中 , 系统按资源管 理 的观点 划分成若干个模块 , 每个模块管理某一类资源 , 如某类外部设备、或缓冲区等 。 我们用 「数据表示」 来抽象系统资源 。 这样 , 每个模块就包含着一定的数据结构 , 以及在此数据结构上定 的所有操作 ( 一组过程) 。 我们规定 : 模块内的数据只能通过定义在模块中的这 些操作去读取和修改 。 模块间通 过规定的方式和一定数 量的接 口相联接 。 每个模块都可以独立编译 , 若干个模块按若干个模块按 照一定方式可以联合成为一个系统
+
+## 模块接口
+
+模块接口通过系统核心锁提供，模块生产者按照既定的方式去生产模块接口。
+
+## 系统分层
+
+1. 核 心 
+
+   任务管理模块是系统 的核心 , 它的主要功能是将单处理机扩充成多处理机（分布式处理），具体参见下一部分 , 以实现系统的并发活 动 。 低级任务管理包括 : 路径管理 、 队列管理和同步原语等部分。 它管理的资源是系统内核的路径描述块 ，以及一些队列数据和运行指针等 。 
+
+2. 第一层 
+
+   第一层实现硬件功能的改造和扩充 , 设有存储管理 、 通道管理 、 资源管理等、任务管理模块，实现内存 扩充 、 时钟扩充和通 道扩充等功 能 。 此外 , 该层中设有中断处理任务管理模块 , 负责 1 、 2 、 3 级中断的处理工作 , 从而给用户提供了一个 无中断概念，因为是分布式系统，有无限大的存储空间 , 有与系统路径数目适应的通道、时钟中断 。 该层中的任务管理模块一般是在底层人物管理下工作 , 系统中与机器有关的模块也主要集中在这一层中 。 
+
+3. 第二层 
+
+   第二层为任务管理，资源管理，接口管理，事件管理模块 , 它们为用户作业空间提供了非常基础的重要分布式服务，用户编程过程中不会感受到他们的存在，但是这些模块一定要存在于系统中，使用静态库的方式做映射，在操作系统内核编译的过程中可以确定执行函数的地址，运行过程中可以通过保护模块进行热插拔，热插拔过程中请求会进入请求队列处理。事件管理是三级的中断，使用户级别的中断。
+
+# 分布式操作系统
+
 
 ![Untitled Diagram](https://h00001.github.io/data/u.svg)
 
 
-|node role|node job|
-|-|:--|
-|Data node|It can calculate at itself. Data nodes can backup each other and communicate with each other for distributed computing.|
-|calculator node|Assign the calculation task to the data node, summarize the calculation result of the data node, and pass it to the control node|
-|Control node|The control node can communicate with other control nodes and vote on some events.|
-|config center|config parameters|
+
+
+
+
+| node role       | node job                                                     |
+| --------------- | :----------------------------------------------------------- |
+| Data node       | It can calculate at itself. Data nodes can backup each other and communicate with each other for distributed computing. |
+| calculator node | Assign the calculation task to the data node, summarize the calculation result of the data node, and pass it to the control node |
+| Control node    | The control node can communicate with other control nodes and vote on some events. |
+| config center   | config parameters                                            |
 
 soft bus:用来传递数据和事件[event]
 
@@ -79,6 +115,7 @@ def fn_door_open(message *msg){
   //当然，铃也在远程，导出<function> doRing()
 }
 ```
+
 #### 软总线中断
 
 优先级很高的事件，会随软中线传播到整个系统，分布式系统中的其他部分必须对这个事件作出响应，这个中断可以打断其他任务执行，一般用在紧急任务处理。
@@ -113,6 +150,7 @@ task manager会合理拆分任务，分配到其他节点。当然也会根据�
 整个系统如同一个系统一样，会将所有资源进行整合，用户级别的进程，也可以称作为任务，任务可以被分配在任意的节点执行，同时任务也可以进行迁移，拆分，跃迁。同时，整个系统之存在一个虚拟文件目录。
 
 ### 可配置的优先级，绑定的执行节点
+
 计算节点，优先级可以由编程者主动设置，这样一些很紧急的任务不会因为得不到执行产生事故。
 
 ### 内核任务向上迁移
@@ -126,5 +164,4 @@ task manager会合理拆分任务，分配到其他节点。当然也会根据�
 ---
 
 written by FrankHan
-
 
